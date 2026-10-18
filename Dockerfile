@@ -2,6 +2,7 @@
 FROM ghcr.io/lowlighter/metrics:v3.35-beta
 
 # Overlay patched plugin files (GitHub API changes)
+COPY source/plugins/base/index.mjs /metrics/source/plugins/base/index.mjs
 COPY source/plugins/achievements/queries/achievements.graphql /metrics/source/plugins/achievements/queries/achievements.graphql
 COPY source/plugins/achievements/queries/organizations.graphql /metrics/source/plugins/achievements/queries/organizations.graphql
 COPY source/plugins/achievements/list/users.mjs /metrics/source/plugins/achievements/list/users.mjs
